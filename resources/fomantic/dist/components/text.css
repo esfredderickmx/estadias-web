@@ -1,0 +1,161 @@
+/*!
+ * # Fomantic-UI 2.9.3 - Text
+ * https://github.com/fomantic/Fomantic-UI/
+ *
+ *
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+             Text
+*******************************/
+
+span.ui.text {
+  line-height: 1;
+}
+span.ui.primary.text {
+  color: #009688;
+}
+span.ui.inverted.primary.text {
+  color: #a7ffeb;
+}
+span.ui.secondary.text {
+  color: #607d8b;
+}
+span.ui.inverted.secondary.text {
+  color: #b0bec5;
+}
+span.ui.red.text {
+  color: #f44336;
+}
+span.ui.inverted.red.text {
+  color: #ff8a80;
+}
+span.ui.orange.text {
+  color: #ff9800;
+}
+span.ui.inverted.orange.text {
+  color: #ffd180;
+}
+span.ui.yellow.text {
+  color: #ffeb3b;
+}
+span.ui.inverted.yellow.text {
+  color: #ffff8d;
+}
+span.ui.olive.text {
+  color: #cddc39;
+}
+span.ui.inverted.olive.text {
+  color: #f4ff81;
+}
+span.ui.green.text {
+  color: #4caf50;
+}
+span.ui.inverted.green.text {
+  color: #b9f6ca;
+}
+span.ui.teal.text {
+  color: #009688;
+}
+span.ui.inverted.teal.text {
+  color: #a7ffeb;
+}
+span.ui.blue.text {
+  color: #2196f3;
+}
+span.ui.inverted.blue.text {
+  color: #82b1ff;
+}
+span.ui.violet.text {
+  color: #673ab7;
+}
+span.ui.inverted.violet.text {
+  color: #b388ff;
+}
+span.ui.purple.text {
+  color: #9c27b0;
+}
+span.ui.inverted.purple.text {
+  color: #ea80fc;
+}
+span.ui.pink.text {
+  color: #e91e63;
+}
+span.ui.inverted.pink.text {
+  color: #ff80ab;
+}
+span.ui.brown.text {
+  color: #795548;
+}
+span.ui.inverted.brown.text {
+  color: #bcaaa4;
+}
+span.ui.grey.text {
+  color: #607d8b;
+}
+span.ui.inverted.grey.text {
+  color: #b0bec5;
+}
+span.ui.black.text {
+  color: #000000;
+}
+span.ui.inverted.black.text {
+  color: #9e9e9e;
+}
+span.ui.error.text {
+  color: #ff5722;
+}
+span.ui.info.text {
+  color: #03a9f4;
+}
+span.ui.success.text {
+  color: #8bc34a;
+}
+span.ui.warning.text {
+  color: #ffc107;
+}
+span.ui.disabled.text {
+  opacity: 0.45;
+}
+
+/* Sizes */
+span.ui.medium.text {
+  font-size: 1em;
+}
+span.ui.mini.text {
+  font-size: 0.4em;
+}
+span.ui.tiny.text {
+  font-size: 0.5em;
+}
+span.ui.small.text {
+  font-size: 0.75em;
+}
+span.ui.large.text {
+  font-size: 1.5em;
+}
+span.ui.big.text {
+  font-size: 2em;
+}
+span.ui.huge.text {
+  font-size: 4em;
+}
+span.ui.massive.text {
+  font-size: 8em;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

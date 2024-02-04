@@ -17,3 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/resources/fomantic/gulpfile.js
+/resources/fomantic/tasks/
+/resources/fomantic/src/
