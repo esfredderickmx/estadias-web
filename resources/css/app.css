@@ -1,0 +1,99 @@
+@import "../fomantic/dist/semantic.min.css";
+
+#site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#site-content {
+  flex: 1 0 auto;
+}
+
+#nav-section.segment {
+  min-height: 70vh;
+  padding: 1em 0em;
+  background-image: url("/public/images/home-hero.jpg") !important;
+  background-size: cover !important;
+  background-blend-mode: overlay !important;
+  background-position: center !important;
+}
+
+#nav-section .logo.item img {
+  margin-right: 1em;
+}
+
+#nav-section .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+#nav-section h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+#nav-section h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+@media only screen and (max-width: 768px) {
+  #nav-section h1.ui.header {
+    font-size: 3em;
+  }
+
+  #nav-section h2 {
+    font-size: 1.5em;
+  }
+
+  @media only screen and (max-width: 425px) {
+
+    #nav-section h1.ui.header {
+      font-size: 2.5em;
+    }
+
+    #nav-section h2 {
+      font-size: 1.3em;
+    }
+  }
+}
+
+nav, #attached-navbar {
+  padding: 0.5em;
+}
