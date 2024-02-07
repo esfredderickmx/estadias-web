@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.index')->name('index');
 Route::view('/home', 'pages.index')->name('home');
+
+Route::get('/sign-in', \App\Livewire\Authentication\SignIn::class)->name('auth.sign-in')->middleware('guest');
+Route::get('/sign-up', \App\Livewire\Authentication\SignUp::class)->name('auth.sign-up')->middleware('guest');
+Route::get('/forgot-password', \App\Livewire\Authentication\Password\Forgot::class)->name('password.request')->middleware('guest');
+Route::get('/reset-password/{token}', \App\Livewire\Authentication\Password\Reset::class)->name('password.reset')->middleware('guest');

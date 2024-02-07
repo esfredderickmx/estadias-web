@@ -9,6 +9,7 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body id="site">
+<livewire:verify-advice></livewire:verify-advice>
 @include('components.partials.navbar.attached')
 @if(\Illuminate\Support\Facades\Route::currentRouteName()!=='index' && \Illuminate\Support\Facades\Route::currentRouteName()!=='home')
   @include('components.partials.navbar')
