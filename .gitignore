@@ -20,3 +20,7 @@ yarn-error.log
 /resources/fomantic/gulpfile.js
 /resources/fomantic/tasks/
 /resources/fomantic/src/
+/resources/fomantic/dist/components/
+/resources/fomantic/dist/themes/basic/
+/resources/fomantic/dist/themes/github/
+/resources/fomantic/dist/themes/material/

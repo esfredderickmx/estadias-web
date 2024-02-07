@@ -29,8 +29,8 @@
         </div>
       </div>
       <div class="seven wide column">
-        <h4 class="ui inverted header">Universidad Tecnológica de Gutiérrez Zamora</h4>
-        <p>Todos los derechos reservados © | Sitio bajo licencia MIT.</p>
+        <h4 class="ui inverted header">Universidad Tecnológica Mexicana</h4>
+        <p>Todos los derechos reservados. © | El sitio y sus recursos están disponibles bajo la licencia MIT.</p>
       </div>
     </div>
     <div class="ui inverted section divider"></div>

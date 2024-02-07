@@ -8,10 +8,10 @@
     <div class="ui text container">
       <h1 class="ui inverted header">Tu estancia, tu control</h1>
       <h2>Preparación para el éxito profesional.</h2>
-      <div {{--href="{{ route('login') }}"--}} class="ui primary huge animated button" tabindex="0">
+      <a href="{{ route('auth.sign-in') }}" class="ui primary huge animated button" tabindex="0">
         <div class="visible content">Comienza ahora</div>
         <div class="hidden content"><i class="right arrow icon"></i></div>
-      </div>
+      </a>
     </div>
   </div>
 
@@ -19,9 +19,9 @@
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="seven wide column">
-          <h3 class="ui header">Documentación</h3>
+          <h3 class="ui header">Formatos y documentos</h3>
           <p>Accede a toda la información necesaria para tus estadías. Encuentra documentos previos y durante el proceso de estancias académicas en un solo lugar.</p>
-          <a class="ui big secondary button">Explorar documentos</a>
+          <a class="ui big secondary button">Explorarlos ahora</a>
         </div>
         <div class="nine wide column">
           <img src="{{asset('images/home-docs.jpg')}}" class="ui centered big bordered rounded image">
@@ -34,9 +34,9 @@
           <img src="{{asset('images/home-agreement.jpg')}}" class="ui centered big bordered rounded image">
         </div>
         <div class="seven wide column">
-          <h3 class="ui header">Empresas y convenios</h3>
+          <h3 class="ui header">Diversidad laboral</h3>
           <p>Descubre oportunidades laborales con empresas asociadas a tu universidad. Explora las vacantes disponibles y conoce las organizaciones con las que tenemos convenio.</p>
-          <a class="ui big secondary button">Conocer empresas</a>
+          <a class="ui big secondary button">Conocerlas ahora</a>
         </div>
         <div class="nine wide mobile only column">
           <img src="{{asset('images/home-agreement.jpg')}}" class="ui centered big bordered rounded image">
@@ -46,9 +46,9 @@
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="seven wide column">
-          <h3 class="ui header">Procesos de estadías</h3>
+          <h3 class="ui header">Gestión remota</h3>
           <p>Mantén el control total de tus procesos de estadías académicas. Comunícate con tus asesores, agenda revisiones, envía documentos y realiza un seguimiento completo de cada etapa del proceso desde donde estés.</p>
-          <a class="ui big secondary button">¡Empezar ahora!</a>
+          <a class="ui big secondary button">¡Tomar el control ahora!</a>
         </div>
         <div class="nine wide column">
           <img src="{{asset('images/home-internship.jpg')}}" class="ui centered big bordered rounded image">
@@ -82,7 +82,7 @@
       <p>Nuestra plataforma te ofrece acceso a una amplia gama de documentos, guías y consejos elaborados por estudiantes experimentados y profesionales en el campo. Desde plantillas de informes hasta tutoriales paso a paso, aquí encontrarás todo lo necesario para optimizar tus estadías.</p>
       <a class="ui large secondary button">Me interesa</a>
       <h4 class="ui horizontal header divider">
-        <a href="#">NOTAS E INTERESES</a>
+        <a href="#">PUBCLICACIONES DE INTERÉS</a>
       </h4>
       <h3 class="ui header">Comunicación efectiva</h3>
       <p>¿En esta sección, podrás iniciar conversaciones, agendar reuniones y compartir documentos de manera eficiente. Mantén un registro de todas tus interacciones y recibe notificaciones importantes para asegurarte de estar siempre al tanto de tu progreso en tus estadías académicas.</p>

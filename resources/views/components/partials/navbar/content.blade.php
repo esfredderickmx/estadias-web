@@ -26,14 +26,14 @@
       <div class="menu">
         <a class="item"><i class="user icon outline"></i>Perfil de usuario</a>
         <div class="divider"></div>
-        <a class="item"><i class="door open alternate icon"></i>Cerrar sesión</a>
+        <livewire:authentication.sign-out></livewire:authentication.sign-out>
       </div>
     </div>
   @endauth
   @guest
-    @if(\Illuminate\Support\Facades\Route::currentRouteName()!=='login' && \Illuminate\Support\Facades\Route::currentRouteName()!=='register')
+    @if(\Illuminate\Support\Facades\Route::currentRouteName()!=='auth.sign-in' && \Illuminate\Support\Facades\Route::currentRouteName()!=='auth.sign-up')
       <div class="item">
-        <a {{--href="{{ route('login') }}"--}} class="ui inverted animated fade button" tabindex="0">
+        <a href="{{ route('auth.sign-in') }}" class="ui inverted animated fade button" tabindex="0">
           <div class="visible content">¿Ya estudias aquí?</div>
           <div class="hidden content">Inicia sesión ahora</div>
         </a>
