@@ -45,7 +45,7 @@
                 <div class="ui compact selection dropdown" data-tooltip="No use el teclado para seleccionar" data-position="top left" data-variation="small">
                   <input type="hidden" name="phone_extension">
                   <div class="default text">Extensión</div>
-                  <div class="menu" x-data="{ext: ''}" x-modelable="ext" wire:model.live="phone_extension">
+                  <div class="menu" x-data="{ ext: '' }" x-modelable="ext" wire:model.live="phone_extension">
                     @foreach($phone_extensions as $key => $value)
                       <div x-on:click="ext = '{{$value}}'" class="item" data-value="{{$value}}"><i class="{{$value}} flag"></i>+{{$key}}</div>
                     @endforeach
@@ -74,7 +74,7 @@
                 </div>
               </div>
               @error('password')
-              <div><span class="ui small error text">{{$message}}</span></div>
+              <span class="ui small error text">{{$message}}</span>
               @enderror
             </div>
             <div class="field required @error('password_confirmation') error @enderror">
@@ -87,7 +87,7 @@
                 </div>
               </div>
               @error('password_confirmation')
-              <div><span class="ui small error text">{{$message}}</span></div>
+              <span class="ui small error text">{{$message}}</span>
               @enderror
             </div>
           </div>
@@ -112,7 +112,7 @@
           <button class="ui fluid primary button" type="submit"><i class="bell icon"></i> Solicitar activación</button>
         </form>
         @error('form')
-        <div class="ui error message">{{$message}}</div>
+        <div wire:transition class="ui error message">{{$message}}</div>
         @enderror
       </div>
       <div class="ui bottom attached large message">

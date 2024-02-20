@@ -68,6 +68,6 @@ class SignUp extends Component {
     $request = User::create($this->all());
     $request->delete();
 
-    redirect(route('sign-in'))->with(['message' => '¡Solicitud realizada correctamente!', 'type' => 'success']);
+    redirect(route('auth.sign-in'))->with(['message' => 'Solicitud realizada correctamente.', 'type' => 'success']);
   }
 }

@@ -8,8 +8,45 @@ $(document).ready(function () {
 $(document).on('livewire:initialized', function () {
   initComponents();
 
+  Livewire.hook('morph.updated', ({el, component}) => {
+    initComponents();
+  });
+
+  Livewire.on('child-check-change', function (data) {
+    $('#select_all').closest('.ui.checkbox').checkbox('set ' + data.set);
+  });
+
   Livewire.on('show-message', function (data) {
+    if (data.modal) {
+      $("[modal='" + data.modal + "']").modal('hide');
+    }
+
+    if (data.dropdown){
+      $("[modal='" + data.modal + "']").find('.ui.dropdown').dropdown('clear').dropdown('set text', 'seleccionar');
+    }
+
     showToast(data.type, data.message);
+  });
+
+  Livewire.on('open-modal', function (data) {
+    $("[modal='" + data.modal + "']").modal({
+      detachable: false,
+      closable: false,
+      inverted: true,
+      transition: 'fade up',
+      allowMultiple: false,
+      onShow: function () {
+        $('.ui.dimmer').addClass('inverted');
+        initComponents();
+      },
+      onHidden: function () {
+        $(this).modal('destroy');
+      }
+    }).modal('show');
+  });
+
+  Livewire.on('reset-modal-dropdown', function (data) {
+    $("[modal='" + data.modal + "']").find('.ui.dropdown').dropdown('clear').dropdown('set text', 'seleccionar');
   });
 });
 
@@ -28,22 +65,37 @@ function initComponents() {
     }
   });
 
-  $('.ui.dropdown').dropdown();
-  $('.ui.selection.dropdown').dropdown({
-    allowTab: false,
-    selectOnKeydown: false,
-    ignoreDiacritics: true,
-    sortSelect: true,
-    fullTextSearch: 'exact',
-    message: {
-      addResult: 'Añadir <b>{term}</b>',
-      count: '{count} seleccionado(s)',
-      maxSelections: '{maxCount} selecciones máx',
-      noResults: 'Sin results.'
-    }
+  $('.ui.dropdown').each(function () {
+    $(this).dropdown();
+  })
+  $('.ui.selection.dropdown').each(function () {
+    $(this).dropdown({
+      allowTab: false,
+      selectOnKeydown: false,
+      ignoreDiacritics: true,
+      sortSelect: true,
+      fullTextSearch: 'exact',
+      message: {
+        addResult: 'Añadir <b>{term}</b>',
+        count: '{count} seleccionado(s)',
+        maxSelections: '{maxCount} selecciones máx',
+        noResults: 'Sin results.'
+      }
+    })
   });
 
-  $('.ui.checkbox').checkbox();
+  $('.ui.checkbox').each(function () {
+    $(this).checkbox();
+  });
+
+  $('.ui.accordion').accordion({
+    onOpen: function () {
+      $(this).closest('.ui.modal').modal('refresh');
+    },
+    onClose: function () {
+      $(this).closest('.ui.modal').modal('refresh');
+    }
+  });
 
   $("[type='password']").closest('.field').find('.ui.toggle').state({
     text: {
@@ -71,9 +123,9 @@ function showToast(type, message) {
     title: function () {
       switch (type) {
         case 'error':
-          return 'Ha ocurrido un error:'
+          return '¡Error!'
         case 'warning':
-          return 'Advertencia:'
+          return 'Atención:'
         case 'info':
           return 'Importante:'
         case 'success':

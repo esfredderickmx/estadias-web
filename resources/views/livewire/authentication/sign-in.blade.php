@@ -28,18 +28,18 @@
             @error('password')
             <div><span class="ui small error text">{{$message}}</span></div>
             @enderror
-            ¿Olvidaste tu contraseña?<a wire:navigate href="{{ route('password.request') }}" class="ui primary tertiary button">Recupérala ahora</a>
+            ¿Olvidaste tu contraseña?<div wire:navigate href="{{ route('password.request') }}" class="ui primary tertiary button">Recupérala ahora</div>
           </div>
           <div class="field">
             <div class="ui checkbox" wire:ignore>
-              <input type="checkbox" name="remember" wire:model.blur="remember">
-              <label>Recordar sesión en este navegador</label>
+              <input type="checkbox" name="remember" id="remember" wire:model.blur="remember">
+              <label for="remember">Recordar sesión en este navegador</label>
             </div>
           </div>
           <button class="ui fluid primary button" type="submit"><i class="door open icon"></i> Ingresar</button>
         </form>
         @error('form')
-        <div class="ui error message">{{$message}}</div>
+        <div wire:transition class="ui error message">{{$message}}</div>
         @enderror
       </div>
       <div class="ui bottom attached large message">

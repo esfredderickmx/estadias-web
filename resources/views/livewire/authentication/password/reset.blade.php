@@ -47,7 +47,7 @@
           <div class="ui error message"></div>
         </form>
         @error('form')
-        <div class="ui error message">{{$message}}</div>
+        <div wire:transition class="ui error message">{{$message}}</div>
         @enderror
       </div>
       <div class="ui bottom attached large message">

@@ -97,3 +97,7 @@
 nav, #attached-navbar {
   padding: 0.5em;
 }
+
+.ui.segment div .ui.dimmer {
+  z-index: 100;
+}
