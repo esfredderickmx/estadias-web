@@ -10,10 +10,10 @@ use Livewire\Component;
 class SignIn extends Component {
 
   #[Validate('required|email:rfc,dns')]
-  public string $email;
+  public $email;
   #[Validate('required')]
-  public string $password;
-  public bool $remember = false;
+  public $password;
+  public $remember = false;
 
   #[Title('Inicio de sesión')]
   public function render() {
