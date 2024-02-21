@@ -97,23 +97,25 @@ function initComponents() {
     }
   });
 
-  $("[type='password']").closest('.field').find('.ui.toggle').state({
-    text: {
-      active: '<i class="eye slash outline icon"></i>',
-      inactive: '<i class="eye outline icon"></i>'
-    },
-    className: {
-      active: 'secondary'
-    },
-    onChange: function () {
-      var passwordField = $(this).closest('.field').find('input');
+  $("[type='password']").closest('.field').find('.ui.toggle').each(function () {
+    $(this).state({
+      text: {
+        active: '<i class="eye slash outline icon"></i>',
+        inactive: '<i class="eye outline icon"></i>'
+      },
+      className: {
+        active: 'secondary'
+      },
+      onChange: function () {
+        var passwordField = $(this).closest('.field').find('input');
 
-      if (passwordField.attr('type') === 'password') {
-        passwordField.attr('type', 'text').focus();
-      } else {
-        passwordField.attr('type', 'password').focus();
+        if (passwordField.attr('type') === 'password') {
+          passwordField.attr('type', 'text').focus();
+        } else {
+          passwordField.attr('type', 'password').focus();
+        }
       }
-    }
+    });
   });
 }
 
